@@ -63,7 +63,7 @@ jobs:
           done
 
       - name: Run DB migrations
-        run: alembic upgrade head
+        run: python -m alembic upgrade head
 
       - name: Run unit & integration tests
         run: pytest --maxfail=1 --disable-warnings -q
