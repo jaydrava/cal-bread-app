@@ -1,3 +1,7 @@
+# FastAPI Calculator with BREAD Operations
+## Overview
+This project is a FastAPI-based calculator application implementing BREAD (Browse, Read, Edit, Add, Delete) endpoints for managing calculations. It includes authentication, containerization with Docker, CI/CD via GitHub Actions, and deployment to Docker Hub.
+
 # 📦 Project Setup
 
 ---
@@ -6,7 +10,7 @@
 
 > Skip this step if you're on Windows.
 
-Homebrew is a package manager for macOS.  
+Homebrew is a package manager for macOS.
 You’ll use it to easily install Git, Python, Docker, etc.
 
 **Install Homebrew:**
@@ -37,7 +41,7 @@ brew install git
 
 - **Windows**
 
-Download and install [Git for Windows](https://git-scm.com/download/win).  
+Download and install [Git for Windows](https://git-scm.com/download/win).
 Accept the default options during installation.
 
 **Verify Git:**
@@ -140,7 +144,7 @@ brew install python
 
 - **Windows**
 
-Download and install [Python for Windows](https://www.python.org/downloads/).  
+Download and install [Python for Windows](https://www.python.org/downloads/).
 ✅ Make sure you **check the box** `Add Python to PATH` during setup.
 
 **Verify Python:**
@@ -170,7 +174,13 @@ venv\Scripts\activate.bat  # Windows
 ```bash
 pip install -r requirements.txt
 ```
+### Run the Application
 
+```bash
+
+```
+The app will be available at:
+http://localhost:8000
 ---
 
 # 🐳 5. (Optional) Docker Setup
@@ -202,8 +212,10 @@ docker run -it --rm <image-name>
 
 ```bash
 python main.py
+uvicorn app.main:app --reload
 ```
-
+The app will be available at:
+http://localhost:8000
 (or update this if the main script is different.)
 
 - **With Docker**:
@@ -227,32 +239,25 @@ git push origin main
 Then submit the GitHub repository link as instructed.
 
 ---
-
-# 🔥 Useful Commands Cheat Sheet
-
-| Action                         | Command                                          |
-| ------------------------------- | ------------------------------------------------ |
-| Install Homebrew (Mac)          | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` |
-| Install Git                     | `brew install git` or Git for Windows installer |
-| Configure Git Global Username  | `git config --global user.name "Your Name"`      |
-| Configure Git Global Email     | `git config --global user.email "you@example.com"` |
-| Clone Repository                | `git clone <repo-url>`                          |
-| Create Virtual Environment     | `python3 -m venv venv`                           |
-| Activate Virtual Environment   | `source venv/bin/activate` / `venv\Scripts\activate.bat` |
-| Install Python Packages        | `pip install -r requirements.txt`               |
-| Build Docker Image              | `docker build -t <image-name> .`                |
-| Run Docker Container            | `docker run -it --rm <image-name>`               |
-| Push Code to GitHub             | `git add . && git commit -m "message" && git push` |
-
+#     8. Running Tests Locally
+```bash
+pytest
+```
 ---
 
-# 📋 Notes
+#     9. Links
+   Docker Hub Repository: https://hub.docker.com/repository/docker/jaydrava/module14-app/tags
+   GitHub Repository: https://github.com/jaydrava/cal-bread-app.git
 
-- Install **Homebrew** first on Mac.
-- Install and configure **Git** and **SSH** before cloning.
-- Use **Python 3.10+** and **virtual environments** for Python projects.
-- **Docker** is optional depending on the project.
+# 📋 Notes and Screenshots
+![alt text](screenshots/frontend.png)
+![alt text](screenshots/login_test.png)
+![alt text](screenshots/registration_test.png)
+![alt text](<screenshots/docker image.png>)
+![alt text](screenshots/github1.png)
+![alt text](screenshots/github.png)
 
+Check Reflection.pdf for more details about project and challenges
 ---
 
 # 📎 Quick Links
