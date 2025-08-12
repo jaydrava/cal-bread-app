@@ -98,5 +98,5 @@ jobs:
             jaydrava/module14-app:latest
             jaydrava/module14-app:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=yourdockerhubusername/yourrepo:cache
+          cache-from: type=registry,ref=jaydrava/module14-app:cache
           cache-to: type=inline,mode=max
