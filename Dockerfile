@@ -13,6 +13,8 @@ RUN python -m pip install --upgrade pip setuptools>=70.0.0 wheel
 
 RUN groupadd -r appgroup && useradd -r -g appgroup appuser
 
+RUN apt-get update && apt-get upgrade -y
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
